@@ -1,6 +1,3 @@
-#include "SaisirBateaux.h"
-
-
 void saisirbateaux1(Tableau T1)
 {
     int x, y, z;
@@ -12,13 +9,13 @@ void saisirbateaux1(Tableau T1)
     scanf("%d", &y);
     printf("Choisir la direction du bateau \n\n");
 
-    if (T1[x-1][y] == NULL )
+    if (T1[x-1][y] != '  ~' )
         {
             printf("1.  Haut \n");
             printf("2.  Droite \n");
             printf("3.  Bas \n");
         }
-        else if (T1[x+1][y] == NULL )
+        else if (T1[x+1][y] != '  ~' )
             {
                 printf("1.  Haut \n");
                 printf("3.  Bas \n");

@@ -1,77 +1,47 @@
 #include"Bateau.h"
 #include"Tableau.h"
 
-int PositionBateaux( int x, int y, Tableau T1)
+void saisirbateaux1(Tableau T1, int t)
 {
+    int x, y, z, accès;
+    while (accès = 0);{
+        printf("Veuillez chosir l'emplacement de votre bateau. \n\n");
+        printf("Position horizontale du bateau :");
+        scanf("%d", &x);
+        printf("\n");
+        printf("Position verticale du bateau :");
+        scanf("%d", &y);
+        printf("Vous avez choisi : %d %d", x, y) ;
 
-    printf("Veuillez chosir l'emplacement de votre bateau. \n\n");
-    printf("Position horizontale du bateau :");
-    scanf("%d", &x);
-    printf("\n");
-    printf("Position verticale du bateau :");
-    scanf("%d", &y);
-   //return (x,y);
-//}
+        if (T1[x][y] == 'H') {
+            printf("Veuillez recommencer vos choix.");
+            } else accès = 1;
+    }
 
-//void DirectionBateau(Tableau T1, int x, int y)
-//{
+        printf("Choisir la direction du bateau \n\n");
 
-    printf("Choisir la direction du bateau \n\n" );
 
-    if (T1[x-1][y-1] != '~' )
-        {
-            printf("2.  Droite \n");
-            printf("3.  Bas \n");
-        }
 
-       if (T1[x-1][y+1] != '~' )
-            {
-                printf("1.  Haut \n");
-                printf("2.  Droite \n");
-            }
-        else if (T1[x+1][y-1] != '~' )
-                {
-                    printf("3.  Bas \n");
-                    printf("4.  Gauche \n");
-                }
-            else if (T1[x+1][y+1] != '~' )
-                    {
-                        printf("1.  Haut \n");
-                        printf("4.  Gauche \n");
-                    }
-                else if (T1[x-1][y] != '~' )
-                        {
-                            printf("1.  Haut \n");
-                            printf("2.  Droite \n");
-                            printf("3.  Bas \n");
-                        }
-                    else if (T1[x+1][y] != '~' )
-                            {
-                                printf("1.  Haut \n");
-                                printf("3.  Bas \n");
-                                printf("4.  Gauche \n");
-                            }
-                        else if (T1[x][y-1] != '~' )
-                                {
-                                    printf("1.  Haut \n");
-                                    printf("2.  Droite \n");
-                                    printf("4.  Gauche \n");
-                                }
-                            else if (T1[x][y+1] != '~' )
-                                    {
-                                        printf("2.  Droite \n");
-                                        printf("3.  Bas \n");
-                                        printf("4.  Gauche \n");
-                                    }
-
-                                    else    printf("1.  Haut \n");
-                                            printf("2.  Droite \n");
-                                            printf("3.  Bas \n");
-                                            printf("4.  Gauche \n");
-
-        printf("\n \n");
-        return 0;
+    if (x-t >= 0)
+    {
+        printf("2.  Gauche \n");
+    }
+    if (y-t >= 0)
+    {
+        printf("1.  Haut \n");
+    }
+    if (x+t <=10 )
+    {
+        printf("3.  Droite \n");
+    }
+    if (y+t <= 10 )
+    {
+        printf("4.  Bas \n");
+    }
+    scanf("%d", &z);
 }
+
+
 
 int bateau2case(Tableau T1, int x, int y){
         int z =0;
@@ -87,4 +57,3 @@ int bateau2case(Tableau T1, int x, int y){
 
 
 }
-

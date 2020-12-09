@@ -1,7 +1,7 @@
 #include"Bateau.h"
 #include"Tableau.h"
 
-char PositionBateaux( int x, int y)
+int PositionBateaux( int x, int y, Tableau T1)
 {
 
     printf("Veuillez chosir l'emplacement de votre bateau. \n\n");
@@ -10,11 +10,11 @@ char PositionBateaux( int x, int y)
     printf("\n");
     printf("Position verticale du bateau :");
     scanf("%d", &y);
-    return (x,y);
-}
+   //return (x,y);
+//}
 
-void DirectionBateau(Tableau T1, int x, int y)
-{
+//void DirectionBateau(Tableau T1, int x, int y)
+//{
 
     printf("Choisir la direction du bateau \n\n" );
 
@@ -70,6 +70,7 @@ void DirectionBateau(Tableau T1, int x, int y)
                                             printf("4.  Gauche \n");
 
         printf("\n \n");
+        return 0;
 }
 
 int bateau2case(Tableau T1, int x, int y){
@@ -86,8 +87,4 @@ int bateau2case(Tableau T1, int x, int y){
 
 
 }
-
-
-
-
 

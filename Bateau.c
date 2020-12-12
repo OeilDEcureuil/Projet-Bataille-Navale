@@ -1,21 +1,21 @@
 #include"Bateau.h"
 #include"Tableau.h"
 
-void saisirbateaux1(Tableau T1, int t)
+int PositionBateaux(Tableau T1, int t, int *x, int *y, int *z)
 {
-    int x, y, z, accès;
-    while (accès = 0);{
+    int  acces;
+    while (acces = 0);{
         printf("Veuillez chosir l'emplacement de votre bateau. \n\n");
         printf("Position horizontale du bateau :");
         scanf("%d", &x);
         printf("\n");
         printf("Position verticale du bateau :");
         scanf("%d", &y);
-        printf("Vous avez choisi : %d %d", x, y) ;
+        printf("Vous avez choisi : %p %p", &x, &y) ;
 
-        if (T1[x][y] == 'H') {
-            printf("Veuillez recommencer vos choix.");
-            } else accès = 1;
+        //if (T1[x][y] == 'H') {
+        //    printf("Veuillez recommencer vos choix.");
+        //    } else acces = 1;
     }
 
         printf("Choisir la direction du bateau \n\n");
@@ -39,20 +39,138 @@ void saisirbateaux1(Tableau T1, int t)
         printf("4.  Bas \n");
     }
     scanf("%d", &z);
+    return *x , *y , *z;
 }
 
 
 
 int bateau2case(Tableau T1, int x, int y){
         int z =0;
-        scanf("%d",z);
+        scanf("%d",&z);
         if (z == 1) {
             T1[x][y] = '#';
             T1[x][y-1] = '#';
             return T1;
         }
-        else return 0;
+        else if (z == 2) {
+            T1[x][y] = '#';
+            T1[x-1][y] = '#';
+            return T1;
+        }
+        else if (z == 3) {
+            T1[x][y] = '#';
+            T1[x+1][y] = '#';
+            return T1;
+        }
+        else if (z == 4) {
+            T1[x][y] = '#';
+            T1[x][y+1] = '#';
+            return T1;
+        }
+}
+int bateau3case(Tableau T1, int x, int y){
+        int z =0;
+        scanf("%d",&z);
+        if (z == 1) {
+            T1[x][y] = '#';
+            T1[x][y-1] = '#';
+            T1[x][y-2] = '#';
+            return T1;
+        }
+        else if (z == 2) {
+            T1[x][y] = '#';
+            T1[x-1][y] = '#';
+            T1[x-2][y] = '#';
+            return T1;
+        }
+        else if (z == 3) {
+            T1[x][y] = '#';
+            T1[x+1][y] = '#';
+            T1[x+2][y] = '#';
+            return T1;
+        }
+        else if (z == 4) {
+            T1[x][y] = '#';
+            T1[x][y+1] = '#';
+            T1[x][y+2] = '#';
+            return T1;
+        }
 
+
+
+}
+
+int bateau4case(Tableau T1, int x, int y){
+        int z =0;
+        scanf("%d",&z);
+        if (z == 1) {
+            T1[x][y] = '#';
+            T1[x][y-1] = '#';
+            T1[x][y-2] = '#';
+            T1[x][y-3] = '#';
+            return T1;
+        }
+        else if (z == 2) {
+            T1[x][y] = '#';
+            T1[x-1][y] = '#';
+            T1[x-2][y] = '#';
+            T1[x-3][y] = '#';
+            return T1;
+        }
+        else if (z == 3) {
+            T1[x][y] = '#';
+            T1[x+1][y] = '#';
+            T1[x+2][y] = '#';
+            T1[x+3][y] = '#';
+            return T1;
+        }
+        else if (z == 4) {
+            T1[x][y] = '#';
+            T1[x][y+1] = '#';
+            T1[x][y+2] = '#';
+            T1[x][y+3] = '#';
+            return T1;
+        }
+
+
+
+}
+
+int bateau5case(Tableau T1, int x, int y){
+        int z =0;
+        scanf("%d",&z);
+        if (z == 1) {
+            T1[x][y] = '#';
+            T1[x][y-1] = '#';
+            T1[x][y-2] = '#';
+            T1[x][y-3] = '#';
+            T1[x][y-4] = '#';
+            return T1;
+        }
+        else if (z == 2) {
+            T1[x][y] = '#';
+            T1[x-1][y] = '#';
+            T1[x-2][y] = '#';
+            T1[x-3][y] = '#';
+            T1[x-4][y] = '#';
+            return T1;
+        }
+        else if (z == 3) {
+            T1[x][y] = '#';
+            T1[x+1][y] = '#';
+            T1[x+2][y] = '#';
+            T1[x+3][y] = '#';
+            T1[x+4][y] = '#';
+            return T1;
+        }
+        else if (z == 4) {
+            T1[x][y] = '#';
+            T1[x][y+1] = '#';
+            T1[x][y+2] = '#';
+            T1[x][y+3] = '#';
+            T1[x][y+4] = '#';
+            return T1;
+        }
 
 
 

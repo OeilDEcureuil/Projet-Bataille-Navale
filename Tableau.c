@@ -1,30 +1,50 @@
-#include "Tableau.h"
+#include "tableau.h"
 
-typedef char Tableau[10][10];
 
-int GenererTab1(Tableau T1)
+void GenererTab1(Tableau T1)
 {
     int i, j;
+    T1[0][0] = '0';
+    T1[0][1] = '1';
+    T1[0][2] = '2';
+    T1[0][3] = '3';
+    T1[0][4] = '4';
+    T1[0][5] = '5';
+    T1[0][6] = '6';
+    T1[0][7] = '7';
+    T1[0][8] = '8';
+    T1[0][9] = '9';
+    T1[0][10] = '10';
+    T1[1][0] = '1';
+    T1[2][0] = '2';
+    T1[3][0] = '3';
+    T1[4][0] = '4';
+    T1[5][0] = '5';
+    T1[6][0] = '6';
+    T1[7][0] = '7';
+    T1[8][0] = '8';
+    T1[9][0] = '9';
+    T1[10][0] = '10';
 
-    for(i = 0; i < 10; i++)
+    for(i = 1; i < 11; i++)
     {
-        for(j = 0; j < 10; j++)
+        for(j = 1; j < 11; j++)
         {
             T1[i][j] = '~';
         }
     }
-    return T1;
+
 }
 
 void afficher(Tableau T1)
 {
     int i, j;
 
-    for(i = 0; i < 10; i++)
+    for(i = 0; i < 11; i++)
     {
-        for(j = 0; j < 10; j++)
+        for(j = 0; j < 11; j++)
         {
-           printf("  %c", T1[i][j]);
+           printf(" %c  ", T1[i][j]);
         }
         printf("\n");
     }

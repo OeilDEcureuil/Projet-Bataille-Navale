@@ -9,12 +9,15 @@
 void main(){
     int decompte = 0;
     int c ;
-    while (decompte == 0) {
+    while (decompte == 0)
+    {
+        system("cls");
         printf("Choississez une option : \n 1. IA facile. ; \n 2. IA moyenne. ; \n 3. joueur contre joueur. \n 4. quitter le programme. \n \n ") ;
         scanf("%d", &c);
+        c = c/1;
         if (c == 1) {
             printf("Vous avez choisis : contre IA en facile. \n");
-            //démarrer le programme Facile
+            facile();
         }
         else if (c == 2) {
             printf("Vous avez choisis : contre IA en moyen. \n");
@@ -36,5 +39,6 @@ void main(){
     //Tableau T1;
     //GenererTab1(T1);
     //afficher(T1);
+
 }
 
